@@ -1,0 +1,42 @@
+identity:
+  name: list_messages
+  author: sendblue
+  label:
+    en_US: List Messages
+description:
+  human:
+    en_US: Read one page of recent messages. Use number to restrict to a conversation
+      and offset for pagination.
+  llm: Read one page of recent messages. Use number to restrict to a conversation
+    and offset for pagination.
+parameters:
+- name: limit
+  type: number
+  required: false
+  label:
+    en_US: Limit
+  human_description:
+    en_US: Maximum results, 1 to 100, default 20
+  llm_description: Maximum results, 1 to 100, default 20
+  form: llm
+- name: number
+  type: string
+  required: false
+  label:
+    en_US: Number
+  human_description:
+    en_US: Filter by phone number
+  llm_description: Filter by phone number
+  form: llm
+- name: offset
+  type: number
+  required: false
+  label:
+    en_US: Offset
+  human_description:
+    en_US: Non-negative pagination offset, default 0
+  llm_description: Non-negative pagination offset, default 0
+  form: llm
+extra:
+  python:
+    source: tools/list_messages.py

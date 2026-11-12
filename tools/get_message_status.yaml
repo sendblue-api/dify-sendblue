@@ -1,0 +1,22 @@
+identity:
+  name: get_message_status
+  author: sendblue
+  label:
+    en_US: Get Message Status
+description:
+  human:
+    en_US: Read delivery status for a message handle returned by Sendblue.
+  llm: Read delivery status for a message handle returned by Sendblue.
+parameters:
+- name: handle
+  type: string
+  required: true
+  label:
+    en_US: Handle
+  human_description:
+    en_US: Message handle returned by Sendblue
+  llm_description: Message handle returned by Sendblue
+  form: llm
+extra:
+  python:
+    source: tools/get_message_status.py

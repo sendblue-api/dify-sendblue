@@ -1,0 +1,39 @@
+identity:
+  author: sendblue
+  name: sendblue
+  label:
+    en_US: Sendblue
+  description:
+    en_US: Send messages and read replies, delivery status, and sending lines.
+  icon: icon.png
+  tags:
+  - productivity
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+    placeholder:
+      en_US: API Key
+    help:
+      en_US: Create credentials in your Sendblue dashboard.
+    url: https://app.sendblue.com/
+  api_secret:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Secret
+    placeholder:
+      en_US: API Secret
+    help:
+      en_US: Create credentials in your Sendblue dashboard.
+    url: https://app.sendblue.com/
+tools:
+- tools/send_message.yaml
+- tools/list_messages.yaml
+- tools/get_message_status.yaml
+- tools/list_lines.yaml
+extra:
+  python:
+    source: provider/sendblue.py

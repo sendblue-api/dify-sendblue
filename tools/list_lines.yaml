@@ -1,0 +1,13 @@
+identity:
+  name: list_lines
+  author: sendblue
+  label:
+    en_US: List Lines
+description:
+  human:
+    en_US: Read sending line state for the connected account.
+  llm: Read sending line state for the connected account.
+parameters: []
+extra:
+  python:
+    source: tools/list_lines.py

@@ -1,0 +1,44 @@
+identity:
+  name: send_message
+  author: sendblue
+  label:
+    en_US: Send Message
+description:
+  human:
+    en_US: Send one text message to the specified recipient after the user confirms
+      the recipient and exact message. Delivery is asynchronous. Do not automatically
+      retry sends after timeouts.
+  llm: Send one text message to the specified recipient after the user confirms the
+    recipient and exact message. Delivery is asynchronous. Do not automatically retry
+    sends after timeouts.
+parameters:
+- name: number
+  type: string
+  required: true
+  label:
+    en_US: Number
+  human_description:
+    en_US: Recipient in E.164 format
+  llm_description: Recipient in E.164 format
+  form: llm
+- name: content
+  type: string
+  required: true
+  label:
+    en_US: Content
+  human_description:
+    en_US: Exact text to send
+  llm_description: Exact text to send
+  form: llm
+- name: from_number
+  type: string
+  required: false
+  label:
+    en_US: From Number
+  human_description:
+    en_US: Sending line in E.164 format; required for free shared-line plans
+  llm_description: Sending line in E.164 format; required for free shared-line plans
+  form: llm
+extra:
+  python:
+    source: tools/send_message.py
