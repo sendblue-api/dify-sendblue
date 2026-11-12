@@ -49,4 +49,3 @@ def test_errors_do_not_leak_credentials_or_body():
     api=client(lambda r:httpx.Response(401,text="test-secret"))
     with pytest.raises(SendblueError) as exc:api.list_lines()
     assert str(exc.value)=="Sendblue returned HTTP 401"
-

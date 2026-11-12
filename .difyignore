@@ -6,3 +6,7 @@ tests/**
 .pytest_cache/**
 *.pyc
 uv.lock
+.env.example
+.gitignore
+_assets/icon.svg
+_assets/icon-dark.svg
